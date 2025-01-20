@@ -16,9 +16,6 @@ app.use(cors());
 // Parse JSON Request Body
 app.use(bodyParser.json());
 
-// Serve static files from the React build
-app.use(express.static(path.join(__dirname, '../frontend/build')));
-
 // MongoDB Connection
 mongoose
   .connect(process.env.MONGO_URI, {
